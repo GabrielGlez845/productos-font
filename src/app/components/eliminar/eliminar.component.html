@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-title">Eliminar un producto</h6>
+                    <form [formGroup]="form">
+                        <div class="row">
+                            <div class=" col-sm-12">
+                                <div class="formulario">
+                                    <label class="col-form-label">Id a elimiar</label>
+                                    <input type="text" class="form-control"  placeholder="id de producto a eliminar" formControlName="id" [class.is-invalid]="idNovalido" >
+                                    <small *ngIf="idNovalido" class="text-danger">
+                                        id no valido
+                                    </small>
+                                </div>   
+                            </div>
+                            <div class=" col-sm-12">
+                                 <div class="text-rigth mt-3">
+                                    <button type="button" (click)="eliminarProdcuto()" class="btn btn-block btn-primary">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>          
+                    </form>
+                    <!-- <button type="button" class="btn btn-secondary" >Regresar</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

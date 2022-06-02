@@ -1,0 +1,25 @@
+<div class="container mt-3">
+    <h5>Listado de Productos </h5>
+    <table class="table">
+        <thead class="table-dark">
+          <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
+              <th>Opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let producto of productos">
+                <td>{{producto.id}}</td>
+                <td>{{producto.nombre}}</td>
+                <td>{{producto.cantidad}}</td>
+                <td>{{producto.precio}}</td>
+                <td>
+                    <button class="btn btn-success" (click)="modificar(producto.id)">Modificar</button>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+</div>
